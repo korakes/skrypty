@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Wyprawki
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @match        https://r*.bloodwars.interia.pl/?a=quest
 // @grant        none
 // @include     https://r*.bloodwars.interia.pl/?a=quest
@@ -19,7 +19,7 @@ function Main() {
     }
     const timerStop = Math.floor(Math.random() * 8000) + 3000;
     const odliczanie = setInterval(function(){
-        time = document.getElementById('quest_timeleft').innerText;
+    const time = document.getElementById('quest_timeleft').innerText;
         if(time.search('Zakończono') == 0) {
             clearInterval(odliczanie);
             setTimeout(function(){
